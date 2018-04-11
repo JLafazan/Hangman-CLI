@@ -34,10 +34,6 @@ function resetGuessesRemaining() {
     guessesRemaining = 10;
 }
 
-//Found this function for clearing the command line and used it throughout object to keep hangman display in same place.
-// function clearScreen() {
-//     process.stdout.write("\x1B[2J\x1B[0f");
-// }
 
 function guessLetter() {
 	var numGuesses = 10;
@@ -77,7 +73,7 @@ function newGame() {
 
 
     if (guessesRemaining === 10) {
-        // this.clearScreen();
+      
         console.log("Let's start!");
 		
         currentWord = new Word(wordChoices[Math.floor((Math.random() * wordChoices.length))]);
